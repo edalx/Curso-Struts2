@@ -1,0 +1,16 @@
+CREATE SCHEMA `test` ;
+
+
+CREATE TABLE `test`.`cliente` (
+  `nombre` VARCHAR(45) NULL,
+  `apellido` VARCHAR(45) NULL,
+  `usuario` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`usuario`));
+
+into cliente values('Maria','Martinez','mmartinez','pa$word007');
+insert into cliente values('Marcelo','Hendara','mhendara','pa$word007');
+insert into cliente values('Jaime','Mancero','jmancero','pa$word007');
+insert into cliente values('Inés','Zapata','izapata','pa$word007');
+insert into cliente values('Carlos','Soria','csoria','pa$word007');
+insert into cliente values('Pedro','Martinez','pmartinez','pa$word007');
