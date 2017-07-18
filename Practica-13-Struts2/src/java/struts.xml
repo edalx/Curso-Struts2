@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="validacion" namespace="/" extends="struts-default">
+        <interceptors>
+            <interceptor name="compruebauser" class="misclases.UserInterceptor"></interceptor>
+        </interceptors>
+        <action name="comprobar" class="misclases.UserInterceptor">
+            <result name="si">/pages/ok.jsp</result>
+            <result name="no">/pages/login.html></result>
+            <interceptor-ref name="compruebauser"/>
+        </action>
+    
+        <action name="grabar" class="misclases.GrabarAction">
+            <result name="grabado">/pages/bienvenida.jsp</result>
+        </action>
+    </package>
+</struts>
